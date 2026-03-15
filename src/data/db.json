@@ -1,0 +1,117 @@
+{
+  "projects": [],
+  "certifications": [],
+  "about": {
+    "name": "Tinku Krishna AR",
+    "subtitle": "Student Developer & AI Enthusiast",
+    "bio": "Building the future with code and intelligence. Passionate about LLMs, automation, and creating seamless user experiences.",
+    "photo": "",
+    "email": "tinkukrishna2523@gmail.com",
+    "location": "Bengaluru, India",
+    "github": "https://github.com/tinkukrishna2523-beep",
+    "linkedin": "https://linkedin.com/in/tinkukrishna",
+    "resumeUrl": "",
+    "available": true,
+    "education": "Computer Science Engineering",
+    "educationSub": "Undergraduate Student",
+    "focusArea": "AI Integration & Web Apps",
+    "focusSub": "Full Stack Development",
+    "journey": "My journey into technology began in a small dorm room, fueled by a flickering laptop and a deep curiosity for how software shapes our world. I quickly learned that while the classroom provides the foundation, true innovation happens during late-night debugging sessions and exploring the vast potential of neural networks.\n\nBalancing an Engineering degree with open-source development has been my greatest teacher. It taught me that progress isn't about having all the answers, but about the persistence to ask the right questions and the grit to build rapidly.",
+    "philosophy": "I believe AI should be an extension of human creativity, not a replacement for it. In my development workflow, AI acts as a \"co-pilot\" that handles the mundane, allowing me to focus on high-level architecture and ethical considerations.",
+    "philosophyQuote": "The goal isn't just to write code faster; it's to build systems that are more intuitive, accessible, and human-centric through the power of intelligence.",
+    "milestones": [
+      {
+        "id": "m1",
+        "year": "2026",
+        "title": "Making websites using AI tools",
+        "desc": "Started making websites using AI , found  a very fast and flexible way to make websites",
+        "active": true
+      },
+      {
+        "id": "m1773565612714",
+        "year": "2025",
+        "title": "UG student",
+        "desc": "Started my ug degree",
+        "active": false
+      }
+    ],
+    "hobbies": [
+      {
+        "id": "h1",
+        "icon": "📚",
+        "title": "Sci-Fi Enthusiast",
+        "desc": "Consuming anything from Isaac Asimov to Cyberpunk 2077 lore. It fuels my imagination for future tech."
+      },
+      {
+        "id": "h3",
+        "icon": "🏋️",
+        "title": "Powerlifting",
+        "desc": "Challenging my physical limits to maintain a sharp mind and building discipline through consistency."
+      }
+    ],
+    "skills": [
+      {
+        "icon": "⚡",
+        "label": "JavaScript / TS"
+      },
+      {
+        "icon": "⚛",
+        "label": "React & Next.js"
+      },
+      {
+        "icon": "🤖",
+        "label": "AI Prompting"
+      },
+      {
+        "icon": "🔧",
+        "label": "Node.js & NoSQL"
+      },
+      {
+        "icon": "🎨",
+        "label": "Tailwind CSS"
+      },
+      {
+        "icon": "☁️",
+        "label": "AWS & Vercel"
+      },
+      {
+        "icon": "✏️",
+        "label": "UI/UX Design"
+      },
+      {
+        "icon": "🧠",
+        "label": "LLM Integration"
+      }
+    ],
+    "updatedAt": "2026-03-15T09:09:22.105Z"
+  },
+  "messages": [
+    {
+      "id": "028e9e35-1a9f-46fe-8c46-62840b8efc88",
+      "name": "jack",
+      "email": "artinku385@gmail.com",
+      "subject": "nothing",
+      "message": "nothing project",
+      "read": false,
+      "receivedAt": "2026-03-15T09:04:02.028Z"
+    },
+    {
+      "id": "e5e17ffe-9d12-400e-b5ce-bb1b18c44ded",
+      "name": "jack",
+      "email": "artinku385@gmail.com",
+      "subject": "nothing",
+      "message": "nothing project",
+      "read": false,
+      "receivedAt": "2026-03-15T09:04:00.751Z"
+    },
+    {
+      "id": "5f4ef7fd-eb36-4e03-94ab-fab562209de7",
+      "name": "jack",
+      "email": "artinku385@gmail.com",
+      "subject": "nothing",
+      "message": "nothing project",
+      "read": false,
+      "receivedAt": "2026-03-15T09:03:57.720Z"
+    }
+  ]
+}
