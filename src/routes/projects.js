@@ -137,6 +137,46 @@ router.delete('/:id/image', auth, (req, res) => {
   res.json({ success: true, message: 'Image removed.' });
 });
 
+// POST /api/projects/:id/screenshots — upload a screenshot
+router.post('/:id/screenshots', auth, upload.single('screenshot'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded.' });
+
+  const db = readDB();
+  const idx = (db.projects || []).findIndex(p => p.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Project not found.' });
+
+  const screenshotUrl = `/uploads/projects/${req.file.filename}`;
+  db.projects[idx].screenshots = [...(db.projects[idx].screenshots || []), screenshotUrl];
+  db.projects[idx].updatedAt = new Date().toISOString();
+  writeDB(db);
+
+  res.json({ success: true, screenshotUrl, screenshots: db.projects[idx].screenshots });
+});
+
+// DELETE /api/projects/:id/screenshots/:index — remove a screenshot by index
+router.delete('/:id/screenshots/:index', auth, (req, res) => {
+  const db = readDB();
+  const idx = (db.projects || []).findIndex(p => p.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Project not found.' });
+
+  const sIdx = parseInt(req.params.index);
+  const screenshots = db.projects[idx].screenshots || [];
+  if (sIdx < 0 || sIdx >= screenshots.length) return res.status(400).json({ error: 'Invalid index.' });
+
+  // Delete file
+  const old = screenshots[sIdx];
+  if (old && old.startsWith('/uploads/')) {
+    const oldPath = path.join(__dirname, '../../', old);
+    if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
+  }
+
+  db.projects[idx].screenshots = screenshots.filter((_, i) => i !== sIdx);
+  db.projects[idx].updatedAt = new Date().toISOString();
+  writeDB(db);
+
+  res.json({ success: true, screenshots: db.projects[idx].screenshots });
+});
+
 // DELETE /api/projects/:id
 router.delete('/:id', auth, (req, res) => {
   const db = readDB();
